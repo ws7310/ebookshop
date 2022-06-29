@@ -2,6 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
+<%
+int level = (Integer)session.getAttribute("level");
+%>
 
 <html>
 <head>
@@ -24,7 +27,7 @@
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/board";
-			con = DriverManager.getConnection(url, "root", "1234");
+			con = DriverManager.getConnection(url, "java", "java");
 		}catch (Exception e){
 			out.println("데이터베이스 접속에 문제가 있습니다.<hr>");
 			out.println(e.getMessage());
@@ -52,8 +55,13 @@
 		}
 	%>
 	</table>
-	
+	<%if(level<=2){%>
+	<h3>레벨3이상만 글 작성 가능</h3>
+	<%} else if(level==3) {%>
 	<a href="write.jsp">게시글 쓰기</a>
+	<%} %>
+	
+	
 	<%
 		if(stmt != null)
 			stmt.close();

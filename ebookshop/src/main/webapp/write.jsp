@@ -27,6 +27,7 @@
 			<td>작성날짜</td>
 			<td><input type="text" name="time" size="60"></td>
 		</tr>
+		
 	</table>
 	<br><br><input type="submit" value="게시글 등록"> <input type="reset" value="다시 쓰기">
 	</form>
