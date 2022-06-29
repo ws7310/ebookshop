@@ -25,7 +25,7 @@
 		</tr>
 		<tr>
 			<td>작성날짜</td>
-			<td><input type="text" name="time" size="60"></td>
+			<td><input type="date" name="time" size="60"></td>
 		</tr>
 		
 	</table>

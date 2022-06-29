@@ -49,6 +49,13 @@ int level = (Integer)session.getAttribute("level");
 		<td><%=rs.getString("name") %></td>
 		<td><%=rs.getString("time") %></td>
 		<td><%=rs.getString("email") %></td>
+		
+		<%if(level==3) {%>
+		<td>
+		<a href="delete.jsp?id=<%=rs.getString("id") %>">삭제</a>
+		<%} %>
+		
+		</td>
 	</tr>
 	<%
 			}
@@ -59,6 +66,10 @@ int level = (Integer)session.getAttribute("level");
 	<h3>레벨3이상만 글 작성 가능</h3>
 	<%} else if(level==3) {%>
 	<a href="write.jsp">게시글 쓰기</a>
+	<br>
+	<a href="main.jsp">메인 페이지로</a>
+	<br>
+	<a href="loginForm.jsp">로그인 페이지로</a>
 	<%} %>
 	
 	
