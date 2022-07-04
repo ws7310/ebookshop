@@ -18,7 +18,7 @@
 <%
 	Class.forName("org.mariadb.jdbc.Driver");
 	Connection conn = DriverManager.getConnection(
-			"jdbc:mysql://localhost:3306/book_db", "root", "1234");
+			"jdbc:mysql://localhost:3306/book_db", "java", "java");
 	Statement stmt = conn.createStatement();
 	String sqlStr;
 	int recordUpdated;

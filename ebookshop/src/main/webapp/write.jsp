@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
+<%
+String name = (String)session.getAttribute("id");
+
+%>
 <html>
 <head>
 <title>게시글 입력</title>
@@ -15,17 +19,13 @@
 		</tr>
 		<tr>
 			<td>작성자</td>
-			<td><input type="text" name="name" size="60"></td>
+			<td><input type="text" name="name" size="60" value="<%=name%>" disabled></td>
 		</tr>
 		<tr>
 			<td>내용</td>
 			<td><textarea name="memo" cols="53" rows="5"></textarea></td>
 		</tr>
 		<tr>
-		</tr>
-		<tr>
-			<td>작성날짜</td>
-			<td><input type="date" name="time" size="60"></td>
 		</tr>
 		
 	</table>
