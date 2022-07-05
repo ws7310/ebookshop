@@ -14,7 +14,7 @@ int level = (Integer)session.getAttribute("level");
 	<a href="order.jsp">주문 페이지로 가기</a><br>
 	<%if(level==1){%>
 	<h3>레벨1은 게시글 보기 및 쓰기 권한이 없습니다.</h3>
-	<a href="loginForm.jsp">로그인 페이지로 돌아가기</a>
+	<a href="loginForm.jsp">로그인 페이지로 돌아가기</a><br><br>
 	<%} else if(level>=2) {%>
 	<a href="list.jsp">게시글 리스트 보러가기</a><br>
 	<%} {%>

@@ -54,6 +54,8 @@
 	}
 		%>
 </table>
-<a href="order.jsp"><h3>주문화면으로 돌아가기</h3></a>
+<a href="order.jsp">주문화면으로 돌아가기</a><br>
+<a href="main.jsp">메인화면으로 돌아가기</a><br>
+<a href="loginForm.jsp">로그인 화면으로 돌아가기</a>
 </body>
 </html>
